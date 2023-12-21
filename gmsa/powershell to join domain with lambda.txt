@@ -1,0 +1,47 @@
+Here's a script that can be used for domain join with these changes:
+
+
+$lambdaName = "..."
+$lambdaRole = "..."
+
+$computerInfo = Get-WmiObject win32_computersystem
+if( $computerInfo.PartOfDomain ) {
+	$currentDomain = $computerInfo.Domain
+	Write-Host "already a member of domain ${currentDomain}"
+	return
+}
+
+$instanceId = Get-EC2InstanceMetadata -Category InstanceId
+
+$creds = Use-StsRole -RoleArn $lambdaRole -RoleSessionName "domain-join-${instanceId}"
+$payload = @{ instance_id = $instanceId } | ConvertTo-Json -Depth 99
+
+$result = Invoke-LMFunction -FunctionName $lambdaName -Payload $payload -Credential $creds.Credentials
+$resultPayloadReader = new-object System.IO.StreamReader( $result.Payload )
+$resultPayload = $resultPayloadReader.ReadToEnd() | ConvertFrom-Json
+$resultPayloadReader.Dispose()
+
+if( $result.FunctionError ) {
+	Write-Host $resultPayload | ConvertTo-Json -Depth 99
+	throw "domain join failed"
+}
+
+$domainJoinParams = @{
+	DomainName = $resultPayload.domain_name
+	Credential = New-Object pscredential -ArgumentList ([pscustomobject]@{
+		UserName = $null
+		Password = (ConvertTo-SecureString -String $resultPayload.domain_join_password -AsPlainText -Force)[0]
+	})
+	Options = @( "UnsecuredJoin","PasswordPass" )
+}
+
+if( $resultPayload.machine_name -ne $computerInfo.Name ) {
+	Rename-Computer -NewName $resultPayload.machine_name
+	$domainJoinParams.Options += "JoinWithNewName"
+}
+
+Add-Computer @domainJoinParams
+Restart-Computer
+
+# don't run any code while waiting for reboot
+Start-Sleep -Seconds 3600

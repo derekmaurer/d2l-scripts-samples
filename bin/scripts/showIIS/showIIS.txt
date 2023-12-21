@@ -1,0 +1,5 @@
+Displays IIS information (needs to be updated to accept user args via command line).
+
+Usage:
+
+cscript showIIS.vbs [servername]

@@ -1,0 +1,41 @@
+﻿<HealthResultReport>
+	<Results>
+		<QueuesHealthResult>
+			<Queues>
+				<Queue>
+					<Name>D2L.LP.Distributed.Events#D2L.LP.Enrollments.Events.EnrollmentChangeEvent,D2L.LP</Name>
+					<MessageCount>0</MessageCount>
+					<DeadMessageCount>160</DeadMessageCount>
+					<QueueTime>00:00:00</QueueTime>
+				</Queue>
+			</Queues>
+			<ResultLevel>Error</ResultLevel>
+		</QueuesHealthResult>
+		<ServicesHealthResult>
+			<Services />
+			<ResultLevel>Good</ResultLevel>
+		</ServicesHealthResult>
+		<CacheHealthResult>
+			<ResultLevel>Good</ResultLevel>
+		</CacheHealthResult>
+		<SolrHealthResult>
+			<SolrSlaveURL>http://CA2PTCS006:8357/solr/</SolrSlaveURL>
+			<SolrMasterURL>http://CA2PTCS006:8357/solr/</SolrMasterURL>
+			<SlaveConnectionTest>Succeeded</SlaveConnectionTest>
+			<MasterConnectionTest>Succeeded</MasterConnectionTest>
+			<ResultLevel>Good</ResultLevel>
+		</SolrHealthResult>
+		<DatabaseHealthResult>
+			<Databases />
+			<ResultLevel>Good</ResultLevel>
+		</DatabaseHealthResult>
+		<FilesHealthResult>
+			<Areas />
+			<ResultLevel>Good</ResultLevel>
+		</FilesHealthResult>
+		<LdapHealthResult>
+			<ResultLevel>Good</ResultLevel>
+			<Servers />
+		</LdapHealthResult>
+	</Results>
+</HealthResultReport>

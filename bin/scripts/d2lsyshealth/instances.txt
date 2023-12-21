@@ -1,0 +1,5 @@
+d2lmooc,d2lmooc,https://mooc.desire2learn.com,ahemuw47egezed7w3d1,ahemuw47egezed7w3d
+scl,spertus,https://spertus.desire2learn.com,ahemuw47egezed7wa6d9,ahemuw47egezed7wa6da
+cccs,ccco,https://CCCO.desire2learn.com,ahemuw47egezed7w38ce2,ahemuw47egezed7w38ce3
+fdlc,chipola,https://d2l.chipola.edu,ahemuw47egezed7w442f,ahemuw47egezed7w4430
+

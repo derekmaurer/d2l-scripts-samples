@@ -1,0 +1,14 @@
+{
+	"JobTypes":[
+		{
+			"Name":"ContentModulePackage",
+			"QueueLength":1344,
+			"MaxAge":"00:00:25"
+		},
+		{
+			"Name":"ContentTopicPackage",
+			"QueueLength":7800,
+			"MaxAge":"00:00:59"
+		}
+	]
+}

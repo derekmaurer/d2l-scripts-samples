@@ -1,0 +1,6 @@
+  samid        
+  ELVIS$
+  ANGUS$       
+  PHAT$  
+  SPEED$          
+dsget succeeded

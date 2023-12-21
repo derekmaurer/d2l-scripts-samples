@@ -1,0 +1,17 @@
+"MAGMA","IIS_Logs_Cleanup","8:00:00 AM, 10/1/2007","","Interactive/Background","11:38:09 AM, 9/17/2007","0","amurray","At 8:00 AM on day 1 of every month, starting 8/16/2007","C:\bin\IIS_Logs_Cleanup.bat ","C:\bin\","task created by amurray - 08/16/2007
+clearns up IIS log files older than one month 
+on all LL servers","Enabled","Monthly","8:00:00 AM","8/16/2007","N/A","1","JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NOV,DEC","WWTEAM\administrator","Disabled","72:0","Disabled","Disabled","Disabled","Disabled","Disabled","No Start On Batteries, Stop On Battery Mode"
+"MAGMA","sqlmaint-backup-FullDumps","11:00:00 PM, 9/25/2007","","Interactive/Background","11:00:00 PM, 9/24/2007","0","amurray","At 11:00 PM every day, starting 6/28/2007","C:\bin\sqldumps\sqlmaint-backup-FullDumps.cmd ","C:\bin\sqldumps","N/A","Enabled","Daily ","11:00:00 PM","6/28/2007","N/A","Everyday","N/A","WWTEAM\administrator","Disabled","72:0","Disabled","Disabled","Disabled","Disabled","Disabled","No Start On Batteries, Stop On Battery Mode"
+"MAGMA","sqlmaint-backup-tlogs","3:00:00 AM, 9/26/2007","","Interactive/Background","3:00:00 AM, 9/25/2007","0","amurray","At 3:00 AM every day, starting 6/28/2007","C:\bin\sqldumps\sqlmaint-backup-tlogs.cmd ","C:\bin\sqldumps","N/A","Enabled","Daily ","3:00:00 AM","6/28/2007","N/A","Everyday","N/A","WWTEAM\administrator","Disabled","72:0","Disabled","Disabled","Disabled","Disabled","Disabled","No Start On Batteries, Stop On Battery Mode"
+INFO: There are no scheduled tasks present in the system.
+INFO: There are no scheduled tasks present in the system.
+INFO: There are no scheduled tasks present in the system.
+INFO: There are no scheduled tasks present in the system.
+INFO: There are no scheduled tasks present in the system.
+INFO: There are no scheduled tasks present in the system.
+"OHENRY","PatchRepositoryMaintenance-40","9:00:00 AM, 10/10/2007","Could not start","Interactive/Background","9:00:00 AM, 7/11/2007","0","bgiroux","At 9:00 AM on the second Wed of every month, starting 3/9/2007","D:\Program Files\Ecora\Patch Manager 5\bin\EcoraPatchManager.exe -s PatchRepositoryMaintenance-40","N/A","Task scheduled by Ecora Software","Enabled","Monthly","9:00:00 AM","3/9/2007","N/A","WEDNESDAY","JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NOV,DEC","WWTEAM\bgiroux","Disabled","72:0","Disabled","Disabled","Disabled","Disabled","Disabled","Disabled"
+INFO: There are no scheduled tasks present in the system.
+INFO: There are no scheduled tasks present in the system.
+INFO: There are no scheduled tasks present in the system.
+INFO: There are no scheduled tasks present in the system.
+INFO: There are no scheduled tasks present in the system.

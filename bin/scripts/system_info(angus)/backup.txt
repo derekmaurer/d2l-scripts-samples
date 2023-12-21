@@ -1,0 +1,42 @@
+dim filesys, filetext, filename, ServerName
+dim UserName, Password 
+Const ForReading = 1
+
+'run a script to get the server names from AD
+Set objShell = WScript.CreateObject("WScript.Shell")
+objShell.Run "get_server_names.bat", 1, true
+
+
+filename="D:\temp\system_info\qa_servers.txt"
+filename2="D:\temp\system_info\qa_servers_info.txt" 
+Set filesys = CreateObject("Scripting.FileSystemObject")
+Set filetext = filesys.OpenTextFile(filename, ForReading, TristateUseDefault)
+
+filetext.skipline
+
+CharPos = 1
+
+	'CurLine = filetext.ReadLine 
+
+	'wscript.echo filetext.ReadLine
+
+	Do While NOT(filetext.AtEndOfLine)
+
+		Char = filetext.Read(CharPos)	
+		If NOT (Char <> " " XOR Char <> "$") Then
+		ServerName = ServerName + Char	
+	End If	
+	loop
+	
+
+wscript.echo ServerName
+
+Set objShell = WScript.CreateObject("WScript.Shell")
+objShell.Run "get_server_info.bat " & ServerName, 1, true
+
+
+
+
+wscript.echo "systeminfo /s " & ServerName  & " /U amurray@wwteam.com /FO CSV /NH >> " & filename2
+
+filetext.close

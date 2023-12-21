@@ -1,0 +1,1 @@
+tr -d '\n$'  < summary.txt | tr -d '\r' | sed -e 's/}}}/\n/g;s/..summary....responsetime....from../","/g;s/,"to":/","/g;s/,"avgresponse":/","/g' | sed -e 's/^/"/g;s/$/"/g' > summ.csv

@@ -1,0 +1,44 @@
+config
+service aiahelp-hank-https 
+sus
+service cargill-hank-https 
+sus
+service efslive-hank-https 
+sus
+service gtaa-hank-https 
+sus
+service gtaa-hank-lapi 
+sus
+service immunex-hank-https 
+sus
+service intranet-hank-https 
+sus
+service intranet-hank-lapi 
+sus
+service nissan-hank-https 
+sus
+service poc-hank-https 
+sus
+service poc-hank-lapi 
+sus
+service promerus-hank-https 
+sus
+service promerus-hank-lapi 
+sus
+service rb-hank-https 
+sus
+service shipleywins-hank-https 
+sus
+service siemens-hank-https 
+sus
+service siemens-hank-lapi 
+sus
+service testdrive9-hank-https 
+sus
+service testdrive9-hank-lapi 
+sus
+service unocalglobal-hank-https 
+sus
+service unocalglobal-hank-lapi 
+sus
+exit

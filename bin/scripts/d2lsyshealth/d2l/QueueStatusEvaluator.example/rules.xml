@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://schemas.desire2learn.com/noc/queueStatusEvaluator/rules">
+
+	<regex pattern="D2L\.LP\.Distributed\.Events#.+">
+		<messageCount threshold="5" />
+	</regex>
+
+	<default>
+		<all>
+			<maxAge threshold="12:34:34"/>
+			<messageCount threshold="43"/>
+			<deadMessageCount threshold="0"/>
+		</all>
+	</default>
+	
+</rules>

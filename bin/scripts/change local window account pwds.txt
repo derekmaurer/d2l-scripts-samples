@@ -1,0 +1,6 @@
+set pwds
+c:\bin\sysinternals\psexec.exe \\%%%servername net user %%%username "%%%password"
+
+check pwds
+net use \\%%%servername\c$ /user:%%%servername\%%%username *
+prompt for pwd

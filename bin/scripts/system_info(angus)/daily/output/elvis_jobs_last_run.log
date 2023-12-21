@@ -1,0 +1,9 @@
+name                                     run_status  last_run                                 next_run                                 server                                  
+---------------------------------------- ----------- ---------------------------------------- ---------------------------------------- ----------------------------------------
+blocking_spids                                     1 Mar  4 2009  8:45AM                      Mar  4 2009  8:45AM                      ELVIS                                   
+DiffDBBackups.DiffDBBackups                        1 Mar  3 2009 11:10PM                      Mar  4 2009 11:10PM                      ELVIS                                   
+FullDBBackups.FullDBBackup                         1 Mar  3 2009 10:03PM                      Mar  4 2009 10:03PM                      ELVIS                                   
+FullDBBackups2.Subplan_1                           1 Mar  3 2009  9:03PM                      Mar  4 2009  9:03PM                      ELVIS                                   
+HistoryCleanUp.FourMonths                          1 Mar  4 2009 12:02AM                      Mar  5 2009 12:02AM                      ELVIS                                   
+TLogBackups.TLogBackups                            1 Mar  4 2009  8:45AM                      Mar  4 2009  8:45AM                      ELVIS                                   
+WeeklyFullDBBackups.WeeklyFullDBBackups            1 Mar  1 2009 11:10PM                      Mar  8 2009 11:10PM                      ELVIS                                   

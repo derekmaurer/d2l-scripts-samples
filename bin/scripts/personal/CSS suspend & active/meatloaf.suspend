@@ -1,0 +1,44 @@
+config
+service aiahelp-meatloaf-https 
+sus
+service cargill-meatloaf-https 
+sus
+service efslive-meatloaf-https 
+sus
+service gtaa-meatloaf-https 
+sus
+service gtaa-meatloaf-lapi 
+sus
+service immunex-meatloaf-https 
+sus
+service intranet-meatloaf-https 
+sus
+service intranet-meatloaf-lapi 
+sus
+service nissan-meatloaf-https 
+sus
+service poc-meatloaf-https 
+sus
+service poc-meatloaf-lapi 
+sus
+service promerus-meatloaf-https 
+sus
+service promerus-meatloaf-lapi 
+sus
+service rb-meatloaf-https 
+sus
+service shipleywins-meatloaf-https 
+sus
+service siemens-meatloaf-https 
+sus
+service siemens-meatloaf-lapi 
+sus
+service testdrive9-meatloaf-https 
+sus
+service testdrive9-meatloaf-lapi 
+sus
+service unocalglobal-meatloaf-https 
+sus
+service unocalglobal-meatloaf-lapi 
+sus
+exit

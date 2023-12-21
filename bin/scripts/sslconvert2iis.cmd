@@ -1,0 +1,1 @@
+openssl pkcs12 -export -out %4 -inkey %2 -in %3 -name '%1'

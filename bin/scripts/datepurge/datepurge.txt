@@ -1,0 +1,11 @@
+rem forfiles -p. -m*.* -d-30 -v -c"CMD /c del @FILE"
+exit
+
+usage:  -pPATH
+	-mFILE_PATTERN
+	-d<+/->NUMBER_OF_DAYS
+	-vVERBOSE
+	-cCOMMAND_TO_RUN (@FILE inserts the currently matched file)
+
+
+	

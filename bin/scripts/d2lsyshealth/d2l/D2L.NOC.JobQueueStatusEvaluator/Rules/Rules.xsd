@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Rules"
+    targetNamespace="http://schemas.desire2learn.com/noc/jobQueueStatusEvaluator/rules"
+    elementFormDefault="qualified"
+    xmlns="http://schemas.desire2learn.com/noc/jobQueueStatusEvaluator/rules"
+    xmlns:mstns="http://schemas.desire2learn.com/noc/jobQueueStatusEvaluator/rules"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+
+	<xs:element name="rules">
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:choice minOccurs="0" maxOccurs="unbounded">
+
+					<xs:element name="queue" type="queueNameRule" />
+					<xs:element name="regex" type="queueNameRegexRule" />
+
+				</xs:choice>
+
+				<xs:element
+						name="default"
+						type="defaultRule"
+						minOccurs="0"
+						maxOccurs="1"
+					/>
+
+			</xs:sequence>
+
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="queueNameRegexRule">
+		<xs:group ref="evaluationRules" minOccurs="1" maxOccurs="1" />
+		<xs:attribute name="pattern" />
+	</xs:complexType>
+
+	<xs:complexType name="queueNameRule">
+		<xs:group ref="evaluationRules" minOccurs="1" maxOccurs="1" />
+		<xs:attribute name="name" />
+	</xs:complexType>
+
+	<xs:complexType name="anyRule">
+		<xs:group ref="evaluationRules" minOccurs="2" maxOccurs="unbounded" />
+	</xs:complexType>
+
+	<xs:complexType name="allRule">
+		<xs:group ref="evaluationRules" minOccurs="2" maxOccurs="unbounded" />
+	</xs:complexType>
+
+	<xs:complexType name="defaultRule">
+		<xs:group ref="evaluationRules"  minOccurs="1" maxOccurs="1" />
+	</xs:complexType>
+
+	<xs:group name="evaluationRules">
+		<xs:choice>
+			<xs:group ref="conditionalEvaluationRules" />
+			<xs:group ref="finalEvaluationRules" />
+		</xs:choice>
+	</xs:group>
+
+	<xs:group name="conditionalEvaluationRules">
+		<xs:choice>
+			<xs:element name="all" type="allRule" />
+			<xs:element name="any" type="anyRule" />
+		</xs:choice>
+	</xs:group>
+
+	<xs:group name="finalEvaluationRules">
+		<xs:choice>
+			<xs:element name="queueLength" type="queueLengthThresholdRule" />
+			<xs:element name="maxAge" type="maxAgeThresholdRule" />
+		</xs:choice>
+	</xs:group>
+
+	<xs:complexType name="queueLengthThresholdRule">
+		<xs:attribute name="threshold" use="optional" type="xs:long" />
+	</xs:complexType>
+
+	<xs:complexType name="maxAgeThresholdRule">
+		<xs:attribute name="threshold" use="optional" type="xs:time" />
+	</xs:complexType>
+
+</xs:schema>

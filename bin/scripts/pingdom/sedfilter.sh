@@ -1,0 +1,1 @@
+sed -e 's/^/s\//;s/,/\//;s/$/\//' idsitelist.csv > idsitelist.sed

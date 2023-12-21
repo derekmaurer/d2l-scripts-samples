@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss xmlns:media="http://search.yahoo.com/mrss" version="2.0">
+    <channel>
+        <item>
+            <title>A.jpg</title>
+            <link>pl_images/A.jpg</link>
+            <media:thumbnail url="pl_thumbs/A.jpg"/>
+            <media:content url="pl_images/A.jpg"/>
+            <guid isPermaLink="false">DF1E4854-0313-4D21-AC4B-EF66BF6E1018</guid>
+        </item>
+        <item>
+            <title>B.jpg</title>
+            <link>pl_images/B.jpg</link>
+            <media:thumbnail url="pl_thumbs/B.jpg"/>
+            <media:content url="pl_images/B.jpg"/>
+            <guid isPermaLink="false">7228637C-9955-406A-879A-96E44796109B</guid>
+        </item>
+        <item>
+            <title>C.jpg</title>
+            <link>pl_images/C.jpg</link>
+            <media:thumbnail url="pl_thumbs/C.jpg"/>
+            <media:content url="pl_images/C.jpg"/>
+            <guid isPermaLink="false">6B69EAFE-FF5F-4314-9157-5442D7F72C20</guid>
+        </item>
+    </channel>
+</rss>

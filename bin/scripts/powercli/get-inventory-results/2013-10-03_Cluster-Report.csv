@@ -1,0 +1,8 @@
+"VCname","DCname","Clustername","Total Physical Memory (MB)","Configured Memory MB","Available Memory (MB)","Total CPU (Mhz)","Configured CPU (Mhz)","Available CPU (Mhz)","Total Disk Space (MB)","Configured Disk Space (MB)","Available Disk Space (MB)"
+"t1vcs02","T1 Bell Datacenter","UCS-Intel-DR","786316.0859375","328807","457509.0859375","86368","9449","76919","3886592","2477016","1409576"
+"t1vcs02","T1 Bell Datacenter","Dell-AMD-Cluster","1671090.4375","766417","904673.4375","552000","117449","434551","77310208","29146585","48163623"
+"t1vcs02","T1 Bell Datacenter","UCS-Intel-Cluster","12842583.1015625","3642909","9199674.1015625","1322768","461865","860903","77310208","29146585","48163623"
+"hfvcs02","Verizon - Virtual DC","UCS-Intel-DR","786315.53125","493361","292954.53125","86368","8287","78081","5168896","4273408","895488"
+"hfvcs02","Verizon - Virtual DC","Dell-AMD-Cluster","2162538.29296875","1038547","1123991.29296875","600000","160022","439978","109404416","42258618","67145798"
+"hfvcs02","Verizon - Virtual DC","AMD-6200-Cluster","524236.0390625","127269","396967.0390625","140800","11184","129616","108380928","42257489","66123439"
+"hfvcs02","Verizon - Virtual DC","Dell-Intel-Cluster","12974244.4101563","2166546","10807698.4101563","1433072","233114","1199958","108380928","42257489","66123439"

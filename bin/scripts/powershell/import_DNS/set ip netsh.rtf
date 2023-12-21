@@ -1,0 +1,11 @@
+To switch the specified adapter from a static address to DHCP, type the following command:
+netsh interface ip set address "Local Area Connection" dhcp
+NOTE: Typing this command changes the interface named "Local Area Connection" to DHCP. 
+
+To display all of the adapters in the computer with their current IP addresses to determine the correct adapter name, type the following command:
+Netsh interface ip show config
+To change to a static address, type the following command:
+netsh interface ip set address "Local Area Connection" static ipaddr subnetmask gateway metric
+NOTE: Replace ipaddr with the static IP address, subnetmask with the subnet mask, gateway with the default gateway and, if necessary, metric with the appropriate metric. The following example changes the interface "Local Area Connection" to a static address of 192.168.0.10 with a subnet mask of 255.255.255.0, and the interface has a default gateway of 192.168.0.1 with a metric of 1:
+netsh interface ip set address "Local Area Connection" static 192.168.0.10 255.255.255.0 192.168.0.1 1
+

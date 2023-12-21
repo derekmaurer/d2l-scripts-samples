@@ -1,0 +1,44 @@
+config
+service aiahelp-nat-https 
+sus
+service cargill-nat-https 
+sus
+service efslive-nat-https 
+sus
+service gtaa-nat-https 
+sus
+service gtaa-nat-lapi 
+sus
+service immunex-nat-https 
+sus
+service intranet-nat-https 
+sus
+service intranet-nat-lapi 
+sus
+service nissan-nat-https 
+sus
+service poc-nat-https 
+sus
+service poc-nat-lapi 
+sus
+service promerus-nat-https 
+sus
+service promerus-nat-lapi 
+sus
+service rb-nat-https 
+sus
+service shipleywins-nat-https 
+sus
+service siemens-nat-https 
+sus
+service siemens-nat-lapi 
+sus
+service testdrive9-nat-https 
+sus
+service testdrive9-nat-lapi 
+sus
+service unocalglobal-nat-https 
+sus
+service unocalglobal-nat-lapi 
+sus
+exit

@@ -1,0 +1,2364 @@
+!Generated on 12/21/2001 13:44:54
+!Active version: ap0500009s
+
+configure
+
+
+!*************************** GLOBAL ***************************
+  username dmaurer des-password xenc4hkcccsfqdmbugsajekejfbftcch superuser 
+  username kinch des-password 1esh6aheechgbbyfyclh6hidtfscmb3a superuser 
+  username jfurman des-password pflcmczcjeyggchclbbfwdtcdajgebef superuser 
+  username jpostma des-password iggd1gobjbmfmhvgpfbcyephaesefdaf superuser 
+  username faichney des-password 3eif3g5gkdpcihjhpg4c4h3bkghc3bsb 
+  username jsiewert des-password zb5d2gtfabbdfdhczhma3bfbmb2bse1c superuser 
+  username monlog des-password fgsemekd1cvcjhka5gocbduczdng2f2h 
+  no restrict web-mgmt 
+  no restrict xml 
+  username philp des-password eh5g2hofqgegedddeh2achidcb1gtcpa superuser 
+
+  logging host 172.25.65.22 facility 6 
+  logging subsystem netman level notice-5 
+
+  dns secondary 172.25.65.29 
+  dns primary 172.25.64.30 
+  dns suffix b2bscene.com 
+
+  ip route 0.0.0.0 0.0.0.0 172.25.64.2 1 
+
+!************************** CIRCUIT **************************
+circuit VLAN1
+  description "Main b2bScene Network" 
+
+  ip address 172.25.64.7 255.255.0.0 
+    ip virtual-router 1 priority 235 preempt 
+    ip virtual-router 2 priority 235 preempt 
+    ip virtual-router 3 priority 235 preempt 
+    ip virtual-router 4 priority 235 preempt 
+    ip virtual-router 5 priority 235 preempt 
+    ip virtual-router 6 priority 235 preempt 
+    ip virtual-router 7 priority 235 preempt 
+    ip virtual-router 8 priority 235 preempt 
+    ip virtual-router 9 priority 235 preempt 
+    ip virtual-router 10 priority 235 preempt 
+    ip virtual-router 11 priority 235 preempt 
+    ip virtual-router 12 priority 235 preempt 
+    ip virtual-router 13 priority 235 preempt 
+    ip virtual-router 15 priority 235 preempt 
+    ip virtual-router 17 priority 235 preempt 
+    ip virtual-router 18 priority 235 preempt 
+    ip virtual-router 19 priority 235 preempt 
+    ip virtual-router 20 priority 235 preempt 
+    ip virtual-router 21 priority 235 preempt 
+    ip virtual-router 22 priority 235 preempt 
+    ip virtual-router 23 priority 235 preempt 
+    ip virtual-router 25 priority 235 preempt 
+    ip virtual-router 26 priority 235 preempt 
+    ip virtual-router 27 priority 235 preempt 
+    ip virtual-router 28 priority 235 preempt 
+    ip virtual-router 29 priority 235 preempt 
+    ip virtual-router 31 priority 235 preempt 
+    ip virtual-router 32 priority 235 preempt 
+    ip virtual-router 34 priority 235 preempt 
+    ip virtual-router 35 priority 235 preempt 
+    ip virtual-router 36 priority 235 preempt 
+    ip virtual-router 37 priority 235 preempt 
+    ip virtual-router 38 priority 235 preempt 
+    ip virtual-router 40 priority 235 preempt 
+    ip virtual-router 41 priority 235 preempt 
+    ip virtual-router 42 priority 235 preempt 
+    ip virtual-router 44 priority 235 preempt 
+    ip virtual-router 45 priority 235 preempt 
+    ip virtual-router 46 priority 235 preempt 
+    ip virtual-router 47 priority 235 preempt 
+    ip virtual-router 48 priority 235 preempt 
+    ip virtual-router 49 priority 235 preempt 
+    ip virtual-router 50 priority 235 preempt 
+    ip virtual-router 51 priority 235 preempt 
+    ip virtual-router 52 priority 235 preempt 
+    ip virtual-router 53 priority 235 preempt 
+    ip virtual-router 54 priority 235 preempt 
+    ip virtual-router 14 priority 235 preempt 
+    ip virtual-router 16 priority 235 preempt 
+    ip virtual-router 55 priority 235 preempt 
+    ip virtual-router 24 priority 235 preempt 
+    ip virtual-router 30 priority 235 preempt 
+    ip virtual-router 39 priority 235 preempt 
+    ip virtual-router 56 priority 235 preempt 
+    ip virtual-router 57 priority 235 preempt 
+    ip virtual-router 58 priority 235 preempt 
+    ip virtual-router 43 priority 235 preempt 
+    ip virtual-router 33 priority 235 preempt 
+    ip redundant-vip 1 172.25.64.77 shared 
+    ip redundant-vip 2 172.25.65.99 shared 
+    ip redundant-vip 3 172.25.64.78 shared 
+    ip redundant-vip 4 172.25.64.76 shared 
+    ip redundant-vip 5 172.25.65.111 shared 
+    ip redundant-vip 6 172.25.65.112 shared 
+    ip redundant-vip 7 172.25.65.113 shared 
+    ip redundant-vip 8 172.25.65.114 shared 
+    ip redundant-vip 9 172.25.65.117 shared 
+    ip redundant-vip 10 172.25.65.118 shared 
+    ip redundant-vip 11 172.25.65.119 shared 
+    ip redundant-vip 12 172.25.65.120 shared 
+    ip redundant-vip 13 172.25.65.121 shared 
+    ip redundant-vip 15 172.25.65.123 shared 
+    ip redundant-vip 17 172.25.65.125 shared 
+    ip redundant-vip 18 172.25.65.126 shared 
+    ip redundant-vip 19 172.25.65.127 shared 
+    ip redundant-vip 20 172.25.65.128 shared 
+    ip redundant-vip 21 172.25.65.129 shared 
+    ip redundant-vip 22 172.25.65.130 shared 
+    ip redundant-vip 23 172.25.65.131 shared 
+    ip redundant-vip 25 172.25.65.133 shared 
+    ip redundant-vip 26 172.25.65.134 shared 
+    ip redundant-vip 27 172.25.65.135 shared 
+    ip redundant-vip 28 172.25.65.137 shared 
+    ip redundant-vip 29 172.25.65.138 shared 
+    ip redundant-vip 31 172.25.65.140 shared 
+    ip redundant-vip 32 172.25.65.146 shared 
+    ip redundant-vip 34 172.25.65.141 shared 
+    ip redundant-vip 35 172.25.65.145 shared 
+    ip redundant-vip 36 172.25.65.144 shared 
+    ip redundant-vip 37 172.25.65.147 shared 
+    ip redundant-vip 38 172.25.65.148 shared 
+    ip redundant-vip 40 172.25.65.170 shared 
+    ip redundant-vip 41 172.25.65.171 shared 
+    ip redundant-vip 42 172.25.65.172 shared 
+    ip redundant-vip 44 172.25.65.174 shared 
+    ip redundant-vip 45 172.25.65.175 shared 
+    ip redundant-vip 46 172.25.65.176 shared 
+    ip redundant-vip 47 172.25.65.177 shared 
+    ip redundant-vip 48 172.25.65.178 shared 
+    ip redundant-vip 49 172.25.65.180 shared 
+    ip redundant-vip 50 172.25.65.181 shared 
+    ip redundant-vip 51 172.25.65.182 shared 
+    ip redundant-vip 52 172.25.65.184 shared 
+    ip redundant-vip 53 172.25.65.183 shared 
+    ip redundant-vip 54 172.25.65.185 shared 
+    ip redundant-vip 14 172.25.65.186 shared 
+    ip redundant-vip 16 172.25.65.187 shared 
+    ip redundant-vip 55 172.25.65.149 shared 
+    ip redundant-vip 24 172.25.65.143 shared 
+    ip redundant-vip 30 172.25.65.188 shared 
+    ip redundant-vip 39 172.25.65.139 shared 
+    ip redundant-vip 56 172.25.65.189 shared 
+    ip redundant-vip 57 172.25.65.190 shared 
+    ip redundant-vip 58 172.25.65.191 shared 
+    ip redundant-vip 43 172.25.65.192 shared 
+    ip redundant-vip 33 172.25.65.193 shared 
+
+!************************** SERVICE **************************
+service admincenter-rundmc-https 
+  ip address 172.25.71.10 
+  port 29120 
+  keepalive type script ap-kal-httpstring "172.25.71.10 19120 /status/status.asp Admincenter" 
+  keepalive frequency 60 
+  active 
+
+service agilent-clapton-https 
+  ip address 172.25.65.67 
+  port 20400 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10400 /agilent/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+
+service agilent-clapton-lapi 
+  ip address 172.25.65.67 
+  port 30400 
+  keepalive frequency 60 
+
+service agilent-gillespie-https 
+  ip address 172.25.65.47 
+  port 20400 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10400 /agilent/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+
+service agilent-gillespie-lapi 
+  ip address 172.25.65.47 
+  port 30400 
+  keepalive frequency 60 
+
+service agilent-stones-https 
+  ip address 172.25.65.66 
+  port 20400 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10400 /agilent/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+
+service agilent-stones-lapi 
+  ip address 172.25.65.66 
+  port 30400 
+  keepalive frequency 60 
+
+service agilent9-butterfield-https 
+  ip address 172.25.74.10 
+  port 20400 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.74.10 10400 /agilent/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service agilent9-butterfield-lapi 
+  ip address 172.25.74.10 
+  port 30400 
+  keepalive frequency 60 
+  active 
+
+service agilent9-pippin-https 
+  ip address 172.25.64.88 
+  port 20400 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.64.88 10400 /agilent/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service agilent9-pippin-lapi 
+  ip address 172.25.64.88 
+  port 30400 
+  keepalive frequency 60 
+  active 
+
+service agilent9-strauss-https 
+  ip address 172.25.65.38 
+  port 20400 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.38 10400 /agilent/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service agilent9-strauss-lapi 
+  ip address 172.25.65.38 
+  port 30400 
+  keepalive frequency 60 
+  active 
+
+service aiahelp-hank-https 
+  ip address 172.25.64.13 
+  port 20840 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10840 /aiahelp/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+
+service aiahelp-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20840 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10840 /aiahelp/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+
+service aiahelp-nat-https 
+  ip address 172.25.65.49 
+  keepalive frequency 60 
+  port 20840 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10840 /aiahelp/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+
+service aramco-clapton-https 
+  ip address 172.25.65.67 
+  port 20360 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10360 /aramco/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service aramco-gillespie-https 
+  ip address 172.25.65.47 
+  port 20360 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10360 /aramco/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service aramco-stones-https 
+  ip address 172.25.65.66 
+  port 20360 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10360 /aramco/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service aspic-miles-https 
+  ip address 172.25.65.16 
+  port 20000 
+  keepalive type script ap-kal-httpstring "172.25.65.16 10000 /aspic/livelink.exe?func=ontime.amalive&Username=monitormiles&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service aspic-oscar-https 
+  ip address 172.25.65.39 
+  port 20000 
+  keepalive type script ap-kal-httpstring "172.25.65.39 10000 /aspic/livelink.exe?func=ontime.amalive&Username=monitoroscar&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service cargill-hank-https 
+  port 20240 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10240 /cargill/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  ip address 172.25.64.13 
+  active 
+
+service cargill-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20240 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10240 /cargill/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service cargill-nat-https 
+  ip address 172.25.65.49 
+  port 20240 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10240 /cargill/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service cita-clapton-https 
+  ip address 172.25.65.67 
+  port 20040 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10040 /cita/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service cita-gillespie-https 
+  ip address 172.25.65.47 
+  port 20040 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10040 /cita/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service cita-stones-https 
+  ip address 172.25.65.66 
+  port 20040 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10040 /cita/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service clapton-https 
+  ip address 172.25.65.67 
+  active 
+
+service collab-gk-kennyg-http 
+  ip address 172.25.69.10 
+  port 19000 
+  keepalive type script ap-kal-httpstring "172.25.69.10 19000 /gate/offsite.asp?system=2&cgi=/gate/gatekeeper.dll&url=http://www.w3.org gatekeeper" 
+  keepalive frequency 60 
+
+service collab-gk-kennyg-https 
+  ip address 172.25.69.10 
+  port 29000 
+  keepalive type script ap-kal-httpstring "172.25.69.10 19000 /gate/offsite.asp?system=2&cgi=/gate/gatekeeper.dll&url=http://www.w3.org gatekeeper" 
+  keepalive frequency 60 
+
+service collab-gk-tesh-http 
+  ip address 172.25.70.10 
+  port 19000 
+  keepalive type script ap-kal-httpstring "172.25.70.10 19000 /gate/offsite.asp?system=2&cgi=/gate/gatekeeper.dll&url=http://www.w3.org gatekeeper" 
+  keepalive frequency 60 
+  active 
+
+service collab-gk-tesh-https 
+  ip address 172.25.70.10 
+  port 29000 
+  keepalive type script ap-kal-httpstring "172.25.70.10 19000 /gate/offsite.asp?system=2&cgi=/gate/gatekeeper.dll&url=http://www.w3.org gatekeeper" 
+  keepalive frequency 60 
+  active 
+
+service content-enya-http 
+  ip address 172.25.68.10 
+  port 17000 
+  keepalive type script ap-kal-httpstring "172.25.68.10 17000 /bwxml/bweb.asp?component=BusComTopSubIndustryList&id=1 SubIndustry" 
+  keepalive frequency 60 
+  active 
+
+service content-yanni-http 
+  ip address 172.25.67.10 
+  port 17000 
+  keepalive type script ap-kal-httpstring "172.25.67.10 17000 /bwxml/bweb.asp?component=BusComTopSubIndustryList&id=1 SubIndustry" 
+  keepalive frequency 60 
+  active 
+
+service cymetech-clapton-https 
+  ip address 172.25.65.67 
+  port 20020 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10020 /cymetech/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service cymetech-gillespie-https 
+  ip address 172.25.65.47 
+  port 20020 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10020 /cymetech/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service cymetech-stones-https 
+  ip address 172.25.65.66 
+  port 20020 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10020 /cymetech/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service ebuild-clapton-https 
+  port 20260 
+  ip address 172.25.65.67 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10260 /ebuild/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service ebuild-gillespie-https 
+  ip address 172.25.65.47 
+  port 20260 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10260 /ebuild/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service ebuild-kennyg-http 
+  ip address 172.25.69.10 
+  port 19020 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.69.10 19020 /gate/offsite.asp?system=2&cgi=/gate/gatekeeper.dll&url=http://www.w3.org gatekeeper" 
+
+service ebuild-kennyg-https 
+  ip address 172.25.69.10 
+  port 29020 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.69.10 19020 /gate/offsite.asp?system=2&cgi=/gate/gatekeeper.dll&url=http://www.w3.org gatekeeper" 
+
+service ebuild-stones-https 
+  port 20260 
+  ip address 172.25.65.66 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10260 /ebuild/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service ebuild-tesh-http 
+  ip address 172.25.70.10 
+  port 19020 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.70.10 19020 /gate/offsite.asp?system=2&cgi=/gate/gatekeeper.dll&url=http://www.w3.org gatekeeper" 
+  active 
+
+service ebuild-tesh-https 
+  ip address 172.25.70.10 
+  port 29020 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.70.10 19020 /gate/offsite.asp?system=2&cgi=/gate/gatekeeper.dll&url=http://www.w3.org gatekeeper" 
+  active 
+
+service ebuildll2-icet-http 
+  ip address 172.25.72.10 
+  port 10600 
+  keepalive type script ap-kal-httpstring "172.25.72.10 10600 /ebuildll2/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+
+service ebuildll2-rundmc-http 
+  ip address 172.25.71.10 
+  port 10600 
+  keepalive type script ap-kal-httpstring "172.25.71.10 10600 /ebuildll2/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+
+service ebuildv1-app-enya-http 
+  ip address 172.25.68.10 
+  port 16180 
+  keepalive frequency 60 
+  active 
+
+service ebuildv1-gk-kennyg-http 
+  ip address 172.25.69.10 
+  port 19180 
+  keepalive frequency 60 
+
+service ebuildv1-gk-kennyg-https 
+  ip address 172.25.69.10 
+  port 29180 
+  keepalive frequency 60 
+
+service ebuildv1admin-enya-http 
+  ip address 172.25.68.10 
+  port 16240 
+  keepalive type script ap-kal-httpstring "172.25.68.10 16240 /status/status.asp Admincenter" 
+  keepalive frequency 60 
+  active 
+
+service ebuildv1admin-enya-https 
+  ip address 172.25.68.10 
+  port 26240 
+  keepalive type script ap-kal-httpstring "172.25.68.10 16240 /status/status.asp Admincenter" 
+  keepalive frequency 60 
+  active 
+
+service ebuildv2-gk-tesh-http 
+  ip address 172.25.70.10 
+  port 19180 
+  keepalive frequency 60 
+  active 
+
+service ebuildv2-gk-tesh-https 
+  ip address 172.25.70.10 
+  port 29180 
+  keepalive frequency 60 
+  active 
+
+service efslive-hank-https 
+  ip address 172.25.64.13 
+  port 20660 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10660 /efslive/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service efslive-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20660 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10660 /efslive/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service efslive-nat-https 
+  ip address 172.25.65.49 
+  port 20660 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10660 /efslive/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service exostar-miles-https 
+  ip address 172.25.65.16 
+  port 20220 
+  keepalive type script ap-kal-httpstring "172.25.65.16 10220 /exostar/livelink.exe?func=ontime.amalive&Username=monitormiles&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service exostar-oscar-https 
+  ip address 172.25.65.39 
+  port 20220 
+  keepalive type script ap-kal-httpstring "172.25.65.39 10220 /exostar/livelink.exe?func=ontime.amalive&Username=monitoroscar&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service extranet-clapton-https 
+  ip address 172.25.65.67 
+  port 20080 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10080 /extranet/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service extranet-gillespie-https 
+  ip address 172.25.65.47 
+  port 20080 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10080 /extranet/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service extranet-stones-https 
+  ip address 172.25.65.66 
+  port 20080 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10080 /extranet/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service gtaa-hank-https 
+  ip address 172.25.64.13 
+  port 20820 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10820 /gtaa/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service gtaa-hank-lapi 
+  ip address 172.25.64.13 
+  port 30820 
+  keepalive frequency 60 
+  active 
+
+service gtaa-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20820 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10820 /gtaa/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service gtaa-meatloaf-lapi 
+  ip address 172.25.65.36 
+  port 30820 
+  keepalive frequency 60 
+  active 
+
+service gtaa-nat-https 
+  ip address 172.25.65.49 
+  port 20820 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10820 /gtaa/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service gtaa-nat-lapi 
+  ip address 172.25.65.49 
+  port 30820 
+  keepalive frequency 60 
+  active 
+
+service hrnet-clapton-https 
+  ip address 172.25.65.67 
+  port 20120 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10120 /hrnet/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service hrnet-gillespie-https 
+  ip address 172.25.65.47 
+  port 20120 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10120 /hrnet/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service hrnet-stones-https 
+  ip address 172.25.65.66 
+  port 20120 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10120 /hrnet/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service immunex-hank-https 
+  keepalive frequency 60 
+  port 20780 
+  ip address 172.25.64.13 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10780 /immunex/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H redirectmeta.html" 
+  active 
+
+service immunex-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20780 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10780 /immunex/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H redirectmeta.html" 
+  active 
+
+service immunex-nat-https 
+  port 20780 
+  ip address 172.25.65.49 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10780 /immunex/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H redirectmeta.html" 
+
+service industry-app-enya-http 
+  ip address 172.25.68.10 
+  port 16220 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.68.10 16220 /industrycentral/registry/system/siteregistry.asp b2bscene" 
+  active 
+
+service industry-app-icet-http 
+  ip address 172.25.72.10 
+  port 16220 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.72.10 16220 /industrycentral/registry/system/siteregistry.asp b2bscene" 
+
+service industry-app-rundmc-http 
+  ip address 172.25.71.10 
+  port 16220 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.71.10 16220 /industrycentral/registry/system/siteregistry.asp b2bscene" 
+  active 
+
+service industry-app-yanni-http 
+  ip address 172.25.67.10 
+  port 16220 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.67.10 16220 /industrycentral/registry/system/siteregistry.asp b2bscene" 
+
+service industry-gk-kennyg-http 
+  ip address 172.25.70.10 
+  port 19220 
+  keepalive frequency 60 
+  active 
+
+service industry-gk-kennyg-https 
+  ip address 172.25.70.10 
+  port 29220 
+  keepalive frequency 60 
+  active 
+
+service industry-gk-tesh-http 
+  ip address 172.25.69.10 
+  port 19220 
+  keepalive frequency 60 
+  active 
+
+service industry-gk-tesh-https 
+  ip address 172.25.69.10 
+  port 29220 
+  keepalive frequency 60 
+  active 
+
+service intranet-hank-https 
+  ip address 172.25.64.13 
+  port 20300 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10300 /b2bscene/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service intranet-hank-lapi 
+  port 30300 
+  keepalive frequency 60 
+  ip address 172.25.64.13 
+  active 
+
+service intranet-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20300 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10300 /b2bscene/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service intranet-meatloaf-lapi 
+  port 30300 
+  keepalive frequency 60 
+  ip address 172.25.65.36 
+  active 
+
+service intranet-nat-https 
+  port 20300 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10300 /b2bscene/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  ip address 172.25.65.49 
+  active 
+
+service intranet-nat-lapi 
+  port 30300 
+  keepalive frequency 60 
+  ip address 172.25.65.49 
+  active 
+
+service km-miles-https 
+  ip address 172.25.65.16 
+  port 20540 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.16 10540 /km/livelink.exe?func=ontime.amalive&Username=monitormiles&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service km-oscar-https 
+  ip address 172.25.65.39 
+  port 20540 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.39 10540 /km/livelink.exe?func=ontime.amalive&Username=monitoroscar&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service lbplay-clapton-https 
+  ip address 172.25.65.67 
+  port 20320 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10320 /lbplay/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service lbplay-gillespie-https 
+  ip address 172.25.65.47 
+  port 20320 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10320 /lbplay/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service lbplay-stones-https 
+  ip address 172.25.65.66 
+  port 20320 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10320 /lbplay/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service leviathan-clapton-https 
+  port 10160 
+  ip address 172.25.65.67 
+  keepalive type script ap-kal-httpstring "172.25.65.67  10160 /leviathan/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service leviathan-gillespie-https 
+  port 10160 
+  ip address 172.25.65.47 
+  keepalive type script ap-kal-httpstring "172.25.65.47  10160 /leviathan/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service leviathan-stones-https 
+  port 10160 
+  ip address 172.25.65.66 
+  keepalive type script ap-kal-httpstring "172.25.65.66  10160 /leviathan/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service mammoth-clapton-http 
+  ip address 172.25.65.67 
+  port 10340 
+  keepalive type script ap-kal-httpstring "172.25.65.67  10340 /mammoth/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service mammoth-gillespie-http 
+  ip address 172.25.65.47 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10340 /mammoth/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  port 10340 
+  active 
+
+service mammoth-stones-http 
+  ip address 172.25.65.66 
+  port 10340 
+  keepalive type script ap-kal-httpstring "172.25.65.66  10340 /mammoth/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service mansur-miles-https 
+  ip address 172.25.65.16 
+  port 20640 
+  keepalive type script ap-kal-httpstring "172.25.65.16 10640 /mansur/livelink.exe?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service mansur-oscar-https 
+  ip address 172.25.65.39 
+  port 20640 
+  keepalive type script ap-kal-httpstring "172.25.65.39 10640 /mansur/livelink.exe?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service nissan-hank-https 
+  ip address 172.25.64.13 
+  port 20900 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10900 /nissan/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service nissan-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20900 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10900 /nissan/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service nissan-nat-https 
+  ip address 172.25.65.49 
+  port 20900 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10900 /nissan/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service otcommunity-clapton-https 
+  ip address 172.25.65.67 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10500 /otcommunity/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  port 20500 
+  active 
+
+service otcommunity-gillespie-https 
+  ip address 172.25.65.47 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10500 /otcommunity/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  port 20500 
+  active 
+
+service otcommunity-stones-https 
+  port 20500 
+  ip address 172.25.65.66 
+  keepalive type script ap-kal-httpstring "172.25.65.66  10500 /otcommunity/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service poc-hank-https 
+  ip address 172.25.64.13 
+  port 20740 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10740 /poc/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service poc-hank-lapi 
+  ip address 172.25.64.13 
+  port 30740 
+  keepalive frequency 60 
+  active 
+
+service poc-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20740 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10740 /poc/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service poc-meatloaf-lapi 
+  ip address 172.25.65.36 
+  port 30740 
+  keepalive frequency 60 
+  active 
+
+service poc-nat-https 
+  ip address 172.25.65.49 
+  port 20740 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10740 /poc/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service poc-nat-lapi 
+  ip address 172.25.65.49 
+  port 30740 
+  keepalive frequency 60 
+  active 
+
+service promerus-hank-https 
+  ip address 172.25.64.13 
+  port 20880 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10880 /promerus/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service promerus-hank-lapi 
+  ip address 172.25.64.13 
+  port 30880 
+  keepalive frequency 60 
+  active 
+
+service promerus-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20880 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10880 /promerus/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service promerus-meatloaf-lapi 
+  ip address 172.25.65.36 
+  port 30880 
+  keepalive frequency 60 
+  active 
+
+service promerus-nat-https 
+  ip address 172.25.65.49 
+  port 20880 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10880 /promerus/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service promerus-nat-lapi 
+  ip address 172.25.65.49 
+  port 30880 
+  keepalive frequency 60 
+  active 
+
+service rb-hank-https 
+  ip address 172.25.64.13 
+  port 20760 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10760 /rb/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service rb-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20760 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10760 /rb/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service rb-nat-https 
+  ip address 172.25.65.49 
+  port 20760 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10760 /rb/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service shipleywins-hank-https 
+  ip address 172.25.64.13 
+  port 20700 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10700 /shipleywins/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service shipleywins-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20700 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10700 /shipleywins/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service shipleywins-nat-https 
+  ip address 172.25.65.49 
+  port 20700 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10700 /shipleywins/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service siemens-hank-https 
+  ip address 172.25.64.13 
+  port 20860 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10860 /siemens/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service siemens-hank-lapi 
+  ip address 172.25.64.13 
+  port 30860 
+  keepalive frequency 60 
+  active 
+
+service siemens-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20860 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10860 /siemens/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service siemens-meatloaf-lapi 
+  ip address 172.25.65.36 
+  port 30860 
+  keepalive frequency 60 
+  active 
+
+service siemens-nat-https 
+  ip address 172.25.65.49 
+  port 20860 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10860 /siemens/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service siemens-nat-lapi 
+  ip address 172.25.65.49 
+  port 30860 
+  keepalive frequency 60 
+  active 
+
+service skins-enya-http 
+  ip address 172.25.68.10 
+  port 16000 
+  keepalive maxfailure 1 
+  keepalive retryperiod 30 
+  keepalive type script ap-kal-httpstring "172.25.68.10 16000 /skins/public/wire/page/emailpage.asp stylesheet" 
+  keepalive frequency 60 
+  active 
+
+service skins-yanni-http 
+  ip address 172.25.67.10 
+  port 16000 
+  keepalive type script ap-kal-httpstring "172.25.67.10 16000 /skins/public/wire/page/emailpage.asp stylesheet" 
+  keepalive maxfailure 1 
+  keepalive frequency 60 
+  keepalive retryperiod 30 
+  active 
+
+service sorry-kennyg-http 
+  ip address 172.25.69.10 
+  port 19040 
+  keepalive type http non-persistent 
+  active 
+
+service sorry-kennyg-https 
+  ip address 172.25.69.10 
+  port 29040 
+  active 
+
+service sorry-tesh-http 
+  port 19040 
+  ip address 172.25.70.10 
+  active 
+
+service sorry-tesh-https 
+  ip address 172.25.70.10 
+  port 29040 
+  active 
+
+service testdrive-miles-https 
+  ip address 172.25.65.16 
+  port 20560 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.16 10560 /testdrive/llisapi.dll?func=ontime.amalive&Username=monitormiles&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service testdrive-oscar-https 
+  ip address 172.25.65.39 
+  port 20560 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.39 10560 /testdrive/llisapi.dll?func=ontime.amalive&Username=monitoroscar&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service testdrive9-hank-https 
+  ip address 172.25.64.13 
+  port 20680 
+  keepalive frequency 120 
+  keepalive retryperiod 120 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10680 /testdrive9/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service testdrive9-hank-lapi 
+  ip address 172.25.64.13 
+  port 30680 
+  keepalive frequency 60 
+  active 
+
+service testdrive9-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20680 
+  keepalive frequency 120 
+  keepalive retryperiod 120 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10680 /testdrive9/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service testdrive9-meatloaf-lapi 
+  ip address 172.25.65.36 
+  port 30680 
+  keepalive frequency 60 
+  active 
+
+service testdrive9-nat-https 
+  ip address 172.25.65.49 
+  port 20680 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10680 /testdrive9/llisapi.dll?func=ontime.amalive&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service testdrive9-nat-lapi 
+  ip address 172.25.65.49 
+  port 30680 
+  keepalive frequency 60 
+  active 
+
+service turner-clapton-https 
+  ip address 172.25.65.67 
+  port 20440 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10440 /turner/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+
+service turner-gillespie-https 
+  ip address 172.25.65.47 
+  port 20440 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10440 /turner/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service turner-stones-https 
+  ip address 172.25.65.66 
+  port 20440 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10440 /turner/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  active 
+
+service unocal-clapton-https 
+  port 20380 
+  ip address 172.25.65.67 
+  keepalive type script ap-kal-httpstring "172.25.65.67  10380 /unocal/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service unocal-gillespie-https 
+  port 20380 
+  ip address 172.25.65.47 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10380 /unocal/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service unocal-stones-https 
+  port 20380 
+  ip address 172.25.65.66 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10380 /unocal/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service unocalglobal-hank-https 
+  ip address 172.25.64.13 
+  port 20800 
+  keepalive type script ap-kal-httpstring "172.25.64.13 10800 /unocalglobal/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service unocalglobal-hank-lapi 
+  ip address 172.25.64.13 
+  port 30800 
+  keepalive frequency 60 
+  active 
+
+service unocalglobal-meatloaf-https 
+  ip address 172.25.65.36 
+  port 20800 
+  keepalive type script ap-kal-httpstring "172.25.65.36 10800 /unocalglobal/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service unocalglobal-meatloaf-lapi 
+  ip address 172.25.65.36 
+  port 30800 
+  keepalive frequency 60 
+  active 
+
+service unocalglobal-nat-https 
+  ip address 172.25.65.49 
+  port 20800 
+  keepalive type script ap-kal-httpstring "172.25.65.49 10800 /unocalglobal/llisapi.dll?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+  active 
+
+service unocalglobal-nat-lapi 
+  ip address 172.25.65.49 
+  port 30800 
+  keepalive frequency 60 
+  active 
+
+service user-icet-http 
+  ip address 172.25.72.10 
+  port 18000 
+  keepalive type script ap-kal-httpstring "172.25.72.10 18000 /usersystem/cookielookie.asp?ac=authcode&sc={11111111-1111-1111-1111-111111111111}  000000000000" 
+  keepalive uri "/usersystem/usersystem.asp" 
+  keepalive port 18000 
+  keepalive frequency 60 
+  keepalive retryperiod 30 
+
+service user-rundmc-http 
+  ip address 172.25.71.10 
+  port 18000 
+  keepalive type script ap-kal-httpstring "172.25.71.10 18000 /usersystem/cookielookie.asp?ac=authcode&sc={11111111-1111-1111-1111-111111111111}  000000000000" 
+  keepalive frequency 60 
+  active 
+
+service wbt-clapton-https 
+  ip address 172.25.65.67 
+  port 20280 
+  keepalive type script ap-kal-httpstring "172.25.65.67 10280 /wbt/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+
+service wbt-gillespie-https 
+  ip address 172.25.65.47 
+  port 20280 
+  keepalive type script ap-kal-httpstring "172.25.65.47 10280 /wbt/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+  keepalive frequency 60 
+
+service wbt-stones-https 
+  ip address 172.25.65.66 
+  port 20280 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.65.66 10280 /wbt/livelink.exe?func=LL.login&Username=monitor&Password=hvqqw*p9(H& redirectmeta.html" 
+
+service wwwb2b-app-enya-http 
+  ip address 172.25.68.10 
+  port 16200 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.68.10 16200 /b2bscene/registry/system/siteregistry.asp b2bscene" 
+  active 
+
+service wwwb2b-app-icet-http 
+  ip address 172.25.72.10 
+  port 16200 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.72.10 16200 /b2bscene/registry/system/siteregistry.asp b2bscene" 
+
+service wwwb2b-app-rundmc-http 
+  ip address 172.25.71.10 
+  port 16200 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.71.10 16200 /b2bscene/registry/system/siteregistry.asp b2bscene" 
+  active 
+
+service wwwb2b-app-yanni-http 
+  ip address 172.25.67.10 
+  port 16200 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.67.10 16200 /b2bscene/registry/system/siteregistry.asp b2bscene" 
+
+service wwwb2b-gk-kennyg-http 
+  ip address 172.25.70.10 
+  port 19200 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.70.10 19200 /gk.dll?nRequests=1&page=103001&site=100&x0_system=4100&x0_xaction=20000&x0_pageid=0 opentext" 
+  active 
+
+service wwwb2b-gk-kennyg-https 
+  ip address 172.25.70.10 
+  port 29200 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.70.10 19200 /gk.dll?nRequests=1&page=103001&site=100&x0_system=4100&x0_xaction=20000&x0_pageid=0 opentext" 
+  active 
+
+service wwwb2b-gk-tesh-http 
+  ip address 172.25.69.10 
+  port 19200 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.69.10 19200 /gk.dll?nRequests=1&page=103001&site=100&x0_system=4100&x0_xaction=20000&x0_pageid=0 opentext" 
+  active 
+
+service wwwb2b-gk-tesh-https 
+  ip address 172.25.69.10 
+  port 29200 
+  keepalive frequency 60 
+  keepalive type script ap-kal-httpstring "172.25.69.10 19200 /gk.dll?nRequests=1&page=103001&site=100&x0_system=4100&x0_xaction=20000&x0_pageid=0 opentext" 
+  active 
+
+!*************************** OWNER ***************************
+owner b2bScene 
+
+  content admincenter-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.140 
+    redirect "https://admincenter.b2bscene.com" 
+    active 
+
+  content admincenter-https 
+    add service admincenter-rundmc-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.140 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    active 
+
+  content agilent-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.133 
+    redirect "https://agilent.b2bscene.com" 
+    active 
+
+  content agilent-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.133 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service agilent-gillespie-https 
+    add service agilent-stones-https 
+    add service agilent-clapton-https 
+    add service agilent9-butterfield-https 
+    add service agilent9-pippin-https 
+    add service agilent9-strauss-https 
+    active 
+
+  content agilent-lapi 
+    protocol tcp 
+    port 30400 
+    balance aca 
+    add service agilent-gillespie-lapi 
+    vip address 172.25.65.133 
+    add service agilent-stones-lapi 
+    add service agilent-clapton-lapi 
+    add service agilent9-strauss-lapi 
+    add service agilent9-pippin-lapi 
+    add service agilent9-butterfield-lapi 
+    active 
+
+  content aiahelp-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.189 
+    redirect "https://aiahelp.wwteam.com" 
+    active 
+
+  content aiahelp-https 
+    protocol tcp 
+    port 443 
+    url "/*" 
+    balance aca 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service aiahelp-meatloaf-https 
+    add service aiahelp-hank-https 
+    add service aiahelp-nat-https 
+    vip address 172.25.65.189 
+    active 
+
+  content aramco-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.131 
+    redirect "https://aramco.b2bscene.com" 
+    active 
+
+  content aramco-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.131 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    add service aramco-stones-https 
+    add service aramco-clapton-https 
+    add service aramco-gillespie-https 
+    active 
+
+  content aspic-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.117 
+    redirect "https://aspic.b2bscene.com" 
+    active 
+
+  content aspic-https 
+    protocol tcp 
+    port 443 
+    add service aspic-miles-https 
+    add service aspic-oscar-https 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.117 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    active 
+
+  content cargill-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.126 
+    redirect "https://www.sunvalleyeurope.com" 
+    active 
+
+  content cargill-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.126 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service cargill-nat-https 
+    add service cargill-meatloaf-https 
+    add service cargill-hank-https 
+    active 
+
+  content cita-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.113 
+    redirect "https://cita.b2bscene.com" 
+    active 
+
+  content cita-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    vip address 172.25.65.113 
+    advanced-balance ssl 
+    application ssl 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    sticky-inact-timeout 15 
+    add service cita-gillespie-https 
+    add service cita-stones-https 
+    add service cita-clapton-https 
+    active 
+
+  content content-http 
+    protocol tcp 
+    port 80 
+    add service content-yanni-http 
+    add service content-enya-http 
+    balance aca 
+    vip address 172.25.64.77 
+    active 
+
+  content cymetech-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.118 
+    redirect "https://cymetech.wwintranet.com" 
+    active 
+
+  content cymetech-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.118 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    secondarySorryServer sorry-tesh-https 
+    primarySorryServer sorry-kennyg-https 
+    add service cymetech-gillespie-https 
+    add service cymetech-stones-https 
+    add service cymetech-clapton-https 
+    active 
+
+  content ebuild-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.127 
+    redirect "https://extranet.ebuild.ca" 
+    active 
+
+  content ebuild-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.127 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    add service ebuild-clapton-https 
+    add service ebuild-gillespie-https 
+    add service ebuild-stones-https 
+    active 
+
+  content ebuild-portal-http 
+    protocol tcp 
+    port 80 
+    add service ebuild-kennyg-http 
+    add service ebuild-tesh-http 
+    balance aca 
+    vip address 172.25.65.135 
+    secondarySorryServer sorry-tesh-http 
+    primarySorryServer sorry-kennyg-http 
+    active 
+
+  content ebuild-portal-https 
+    protocol tcp 
+    port 443 
+    add service ebuild-kennyg-https 
+    add service ebuild-tesh-https 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.135 
+    advanced-balance ssl 
+    sticky-inact-timeout 15 
+    application ssl 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    active 
+
+  content ebuildll2-http 
+    protocol tcp 
+    port 80 
+    add service ebuildll2-icet-http 
+    add service ebuildll2-rundmc-http 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.170 
+    primarySorryServer sorry-tesh-http 
+    secondarySorryServer sorry-kennyg-http 
+    active 
+
+  content ebuildv1-app-http 
+    protocol tcp 
+    port 80 
+    add service ebuildv1-app-enya-http 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.172 
+    primarySorryServer sorry-tesh-http 
+    secondarySorryServer sorry-kennyg-http 
+    active 
+
+  content ebuildv1-http 
+    vip address 172.25.65.185 
+    protocol tcp 
+    port 80 
+    add service ebuildv1-gk-kennyg-http 
+    balance aca 
+    secondarySorryServer sorry-tesh-http 
+    primarySorryServer sorry-kennyg-http 
+    active 
+
+  content ebuildv1-https 
+    vip address 172.25.65.185 
+    protocol tcp 
+    port 443 
+    add service ebuildv1-gk-kennyg-https 
+    balance aca 
+    url "/*" 
+    advanced-balance ssl 
+    sticky-inact-timeout 15 
+    application ssl 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    active 
+
+  content ebuildv1admin-http 
+    protocol tcp 
+    port 80 
+    add service ebuildv1admin-enya-http 
+    redirect "https://ebuildv1admin.b2bscene.com" 
+    vip address 172.25.65.180 
+    primarySorryServer sorry-kennyg-http 
+    secondarySorryServer sorry-tesh-http 
+    active 
+
+  content ebuildv1admin-https 
+    protocol tcp 
+    port 443 
+    add service ebuildv1admin-enya-https 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.180 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    active 
+
+  content ebuildv2-http 
+    vip address 172.25.65.171 
+    protocol tcp 
+    port 80 
+    add service ebuildv2-gk-tesh-http 
+    balance aca 
+    secondarySorryServer sorry-tesh-http 
+    primarySorryServer sorry-kennyg-http 
+    active 
+
+  content ebuildv2-https 
+    vip address 172.25.65.171 
+    protocol tcp 
+    port 443 
+    add service ebuildv2-gk-tesh-https 
+    balance aca 
+    url "/*" 
+    advanced-balance ssl 
+    sticky-inact-timeout 15 
+    application ssl 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    active 
+
+  content efslive-https 
+    protocol tcp 
+    port 443 
+    add service efslive-nat-https 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.181 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    add service efslive-meatloaf-https 
+    add service efslive-hank-https 
+    active 
+
+  content exostar-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.125 
+    redirect "https://exostar.b2bscene.com" 
+    active 
+
+  content exostar-https 
+    add service exostar-miles-https 
+    protocol tcp 
+    port 443 
+    add service exostar-oscar-https 
+    url "/*" 
+    balance aca 
+    vip address 172.25.65.125 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    active 
+
+  content extranet-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.120 
+    redirect "https://care.b2bscene.com" 
+    active 
+
+  content extranet-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.120 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service extranet-gillespie-https 
+    add service extranet-stones-https 
+    add service extranet-clapton-https 
+    active 
+
+  content gk-http 
+    protocol tcp 
+    port 80 
+    add service collab-gk-kennyg-http 
+    add service collab-gk-tesh-http 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.174 
+    primarySorryServer sorry-tesh-http 
+    secondarySorryServer sorry-kennyg-http 
+    active 
+
+  content gk-https 
+    add service collab-gk-kennyg-https 
+    protocol tcp 
+    port 443 
+    add service collab-gk-tesh-https 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.174 
+    advanced-balance ssl 
+    application ssl 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    sticky-inact-timeout 15 
+    active 
+
+  content gtaa-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.188 
+    redirect "https://gtaa.b2bscene.com" 
+    active 
+
+  content gtaa-https 
+    balance aca 
+    protocol tcp 
+    port 443 
+    url "/*" 
+    vip address 172.25.65.188 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service gtaa-meatloaf-https 
+    add service gtaa-hank-https 
+    add service gtaa-nat-https 
+    active 
+
+  content gtaa-lapi 
+    protocol tcp 
+    port 30820 
+    balance aca 
+    add service gtaa-meatloaf-lapi 
+    add service gtaa-hank-lapi 
+    add service gtaa-nat-lapi 
+    vip address 172.25.65.188 
+    active 
+
+  content hrnet-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.114 
+    redirect "https://hrnet.b2bscene.com" 
+    active 
+
+  content hrnet-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    vip address 172.25.65.114 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    add service hrnet-gillespie-https 
+    add service hrnet-stones-https 
+    add service hrnet-clapton-https 
+    active 
+
+  content immunex-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.139 
+    redirect "https://immunex.b2bscene.com" 
+    active 
+
+  content immunex-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service immunex-nat-https 
+    add service immunex-meatloaf-https 
+    add service immunex-hank-https 
+    vip address 172.25.65.139 
+    active 
+
+  content industry-app-http 
+    protocol tcp 
+    port 80 
+    add service industry-app-icet-http 
+    add service industry-app-rundmc-http 
+    add service industry-app-enya-http 
+    add service industry-app-yanni-http 
+    balance aca 
+    vip address 172.25.65.177 
+    active 
+
+  content industry-gk-http 
+    protocol tcp 
+    port 80 
+    add service industry-gk-kennyg-http 
+    add service industry-gk-tesh-http 
+    balance aca 
+    vip address 172.25.65.176 
+    secondarySorryServer sorry-tesh-http 
+    primarySorryServer sorry-kennyg-http 
+    active 
+
+  content industry-gk-https 
+    add service industry-gk-kennyg-https 
+    add service industry-gk-tesh-https 
+    balance aca 
+    protocol tcp 
+    port 443 
+    url "/*" 
+    vip address 172.25.65.176 
+    advanced-balance ssl 
+    sticky-inact-timeout 15 
+    application ssl 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    active 
+
+  content intranet-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.128 
+    redirect "https://intranet.b2bscene.com" 
+    active 
+
+  content intranet-https 
+    balance aca 
+    protocol tcp 
+    port 443 
+    url "/*" 
+    add service intranet-nat-https 
+    vip address 172.25.65.128 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service intranet-hank-https 
+    add service intranet-meatloaf-https 
+    active 
+
+  content intranet-lapi 
+    protocol tcp 
+    port 30300 
+    balance aca 
+    add service intranet-nat-lapi 
+    vip address 172.25.65.128 
+    add service intranet-hank-lapi 
+    add service intranet-meatloaf-lapi 
+    active 
+
+  content km-https 
+    protocol tcp 
+    port 443 
+    add service km-oscar-https 
+    add service km-miles-https 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.147 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    active 
+
+  content lbplay-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.112 
+    redirect "https://lbplay.b2bscene.com" 
+    active 
+
+  content lbplay-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.112 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service lbplay-gillespie-https 
+    add service lbplay-stones-https 
+    add service lbplay-clapton-https 
+    active 
+
+  content lbplay-https-redirect 
+    vip address 172.25.65.112 
+    application ssl 
+    protocol tcp 
+    port 443 
+    advanced-balance url 
+    balance aca 
+
+  content leviathan-http 
+    protocol tcp 
+    port 80 
+    balance aca 
+    vip address 172.25.65.123 
+    add service leviathan-clapton-https 
+    add service leviathan-stones-https 
+    add service leviathan-gillespie-https 
+    active 
+
+  content mammoth-http 
+    protocol tcp 
+    port 80 
+    balance aca 
+    vip address 172.25.65.129 
+    primarySorryServer sorry-tesh-http 
+    secondarySorryServer sorry-kennyg-http 
+    add service mammoth-clapton-http 
+    add service mammoth-gillespie-http 
+    add service mammoth-stones-http 
+    active 
+
+  content mansur-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.178 
+    redirect "https://mirs.mansurcapitalgroup.com" 
+    active 
+
+  content mansur-https 
+    add service mansur-oscar-https 
+    add service mansur-miles-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.178 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    active 
+
+  content nissan-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.193 
+    redirect "https://nissan.wwteam.com" 
+    active 
+
+  content nissan-https 
+    balance aca 
+    protocol tcp 
+    port 443 
+    url "/*" 
+    vip address 172.25.65.193 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service nissan-nat-https 
+    add service nissan-meatloaf-https 
+    add service nissan-hank-https 
+    active 
+
+  content otcommunity-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.144 
+    redirect "https://otcommunity.wwextranet.com" 
+    active 
+
+  content otcommunity-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    vip address 172.25.65.144 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    secondarySorryServer sorry-tesh-https 
+    primarySorryServer sorry-kennyg-https 
+    add service otcommunity-clapton-https 
+    add service otcommunity-stones-https 
+    add service otcommunity-gillespie-https 
+    active 
+
+  content poc-http 
+    vip address 172.25.65.186 
+    protocol tcp 
+    port 80 
+    redirect "https://poc.wwteam.com" 
+    active 
+
+  content poc-https 
+    vip address 172.25.65.186 
+    protocol tcp 
+    port 443 
+    add service poc-nat-https 
+    add service poc-meatloaf-https 
+    add service poc-hank-https 
+    balance aca 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    secondarySorryServer sorry-tesh-https 
+    primarySorryServer sorry-kennyg-https 
+    active 
+
+  content poc-lapi 
+    protocol tcp 
+    port 30740 
+    balance aca 
+    add service poc-meatloaf-lapi 
+    add service poc-hank-lapi 
+    add service poc-nat-lapi 
+    vip address 172.25.65.186 
+    active 
+
+  content promerus-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.191 
+    redirect "https://go2promerus.wwextranet.com" 
+    active 
+
+  content promerus-https 
+    protocol tcp 
+    port 443 
+    url "/*" 
+    balance aca 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service promerus-meatloaf-https 
+    add service promerus-hank-https 
+    add service promerus-nat-https 
+    vip address 172.25.65.191 
+    active 
+
+  content promerus-lapi 
+    protocol tcp 
+    port 30880 
+    balance aca 
+    vip address 172.25.65.191 
+    add service promerus-hank-lapi 
+    add service promerus-meatloaf-lapi 
+    add service promerus-nat-lapi 
+    active 
+
+  content rb-http 
+    vip address 172.25.65.187 
+    protocol tcp 
+    port 80 
+    redirect "https://rb.wwteam.com" 
+    active 
+
+  content rb-https 
+    vip address 172.25.65.187 
+    protocol tcp 
+    port 443 
+    add service rb-nat-https 
+    add service rb-meatloaf-https 
+    add service rb-hank-https 
+    balance aca 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    secondarySorryServer sorry-tesh-https 
+    primarySorryServer sorry-kennyg-https 
+    active 
+
+  content shipleywins-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.182 
+    redirect "https://shipleywins.b2bscene.com" 
+    active 
+
+  content shipleywins-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    add service shipleywins-nat-https 
+    vip address 172.25.65.182 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    secondarySorryServer sorry-tesh-https 
+    primarySorryServer sorry-kennyg-https 
+    add service shipleywins-meatloaf-https 
+    add service shipleywins-hank-https 
+    active 
+
+  content siemens-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.190 
+    redirect "https://siemens.wwteam.com" 
+    active 
+
+  content siemens-https 
+    protocol tcp 
+    port 443 
+    url "/*" 
+    balance aca 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service siemens-meatloaf-https 
+    add service siemens-hank-https 
+    add service siemens-nat-https 
+    vip address 172.25.65.190 
+    active 
+
+  content siemens-lapi 
+    port 30860 
+    protocol tcp 
+    balance aca 
+    vip address 172.25.65.190 
+    add service siemens-hank-lapi 
+    add service siemens-meatloaf-lapi 
+    add service siemens-nat-lapi 
+    active 
+
+  content skins-http 
+    protocol tcp 
+    add service skins-yanni-http 
+    add service skins-enya-http 
+    port 80 
+    balance aca 
+    vip address 172.25.64.78 
+    active 
+
+  content testdrive-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.148 
+    redirect "https://testdrive.b2bscene.com" 
+    active 
+
+  content testdrive-https 
+    protocol tcp 
+    port 443 
+    add service testdrive-miles-https 
+    add service testdrive-oscar-https 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.148 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    active 
+
+  content testdrive9-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.183 
+    redirect "https://testdrive9.b2bscene.com" 
+    active 
+
+  content testdrive9-https 
+    add service testdrive9-nat-https 
+    balance aca 
+    protocol tcp 
+    port 443 
+    url "/*" 
+    vip address 172.25.65.183 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    add service testdrive9-meatloaf-https 
+    add service testdrive9-hank-https 
+    active 
+
+  content testdrive9-lapi 
+    protocol tcp 
+    port 30680 
+    balance aca 
+    add service testdrive9-meatloaf-lapi 
+    add service testdrive9-hank-lapi 
+    add service testdrive9-nat-lapi 
+    vip address 172.25.65.183 
+    active 
+
+  content turner-http 
+    protocol tcp 
+    port 80 
+    url "/*" 
+    vip address 172.25.65.137 
+    redirect "https://www.turnerknowledge.com" 
+    active 
+
+  content turner-http-learn 
+    protocol tcp 
+    port 80 
+    url "/learn" 
+    vip address 172.25.65.137 
+    redirect "https://www.turnerknowledge.com/learn" 
+    active 
+
+  content turner-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.137 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    add service turner-gillespie-https 
+    add service turner-stones-https 
+    add service turner-clapton-https 
+    active 
+
+  content turneruniversity-http 
+    protocol tcp 
+    port 80 
+    url "/*" 
+    vip address 172.25.65.145 
+    redirect "https://www.turnerknowledge.com/learn" 
+    active 
+
+  content unocal-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.130 
+    redirect "https://unocal.wwextranet.com" 
+    active 
+
+  content unocal-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.130 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    add service unocal-clapton-https 
+    add service unocal-stones-https 
+    add service unocal-gillespie-https 
+    active 
+
+  content unocalglobal-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.143 
+    redirect "https://unocalglobal.wwintranet.com" 
+    active 
+
+  content unocalglobal-https 
+    protocol tcp 
+    port 443 
+    url "/*" 
+    balance aca 
+    vip address 172.25.65.143 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-tesh-https 
+    secondarySorryServer sorry-kennyg-https 
+    add service unocalglobal-meatloaf-https 
+    add service unocalglobal-hank-https 
+    add service unocalglobal-nat-https 
+    active 
+
+  content unocalglobal-lapi 
+    vip address 172.25.65.143 
+    protocol tcp 
+    port 30800 
+    balance aca 
+    add service unocalglobal-meatloaf-lapi 
+    add service unocalglobal-hank-lapi 
+    add service unocalglobal-nat-lapi 
+    active 
+
+  content user-http 
+    protocol tcp 
+    port 80 
+    add service user-rundmc-http 
+    add service user-icet-http 
+    balance aca 
+    vip address 172.25.64.76 
+    active 
+
+  content wbt-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.134 
+    redirect "https://wbt.b2bscene.com" 
+    active 
+
+  content wbt-https 
+    protocol tcp 
+    port 443 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.134 
+    advanced-balance ssl 
+    application ssl 
+    sticky-inact-timeout 15 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    add service wbt-gillespie-https 
+    add service wbt-stones-https 
+    add service wbt-clapton-https 
+    active 
+
+  content wwwb2b-app-http 
+    protocol tcp 
+    vip address 172.25.65.175 
+    port 80 
+    add service wwwb2b-app-enya-http 
+    add service wwwb2b-app-icet-http 
+    active 
+
+  content wwwb2b-gk-http 
+    protocol tcp 
+    port 80 
+    add service wwwb2b-gk-kennyg-http 
+    add service wwwb2b-gk-tesh-http 
+    balance aca 
+    vip address 172.25.65.99 
+    secondarySorryServer sorry-tesh-http 
+    primarySorryServer sorry-kennyg-http 
+    active 
+
+  content wwwb2b-gk-https 
+    protocol tcp 
+    port 443 
+    add service wwwb2b-gk-kennyg-https 
+    add service wwwb2b-gk-tesh-https 
+    balance aca 
+    url "/*" 
+    vip address 172.25.65.99 
+    advanced-balance ssl 
+    sticky-inact-timeout 15 
+    application ssl 
+    primarySorryServer sorry-kennyg-https 
+    secondarySorryServer sorry-tesh-https 
+    active 
+
+  content wwwb2b-redirect-to-hms-http 
+    protocol tcp 
+    port 80 
+    vip address 172.25.65.192 
+    redirect "http://hms.opentext.com" 
+    active 

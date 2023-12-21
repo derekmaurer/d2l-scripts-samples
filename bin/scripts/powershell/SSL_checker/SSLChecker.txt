@@ -1,0 +1,7 @@
+Run ./SSLChecker.ps1 from PowerShell.
+This ps script read each line of hostnames.txt and does the following checks;
+	- test to see if hostname can be resolved 
+	- attempt SSL conection
+	- get certificate expiry
+Output is in CSV format, INVALID
+	- INVALID

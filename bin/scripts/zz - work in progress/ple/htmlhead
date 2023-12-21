@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>files</title>
+	<link id="gallery" rel="alternate" href="photos.rss" type="application/rss+xml">
+	<script type="text/javascript" src="http://lite.piclens.com/current/piclens.js"> </script>
+	<style type="text/css">
+        a {
+            color: #00f;
+        }
+		#pl_main {
+			width: 700px;
+			margin: 20px auto;
+			font-family: Arial;
+			font-size: 14px;
+			line-height: 18px;
+			color: #333;
+		}
+		table.gallery {
+			padding: 5px;
+			width: 100%;
+		}
+		table.gallery td {
+			text-align: center;
+		}
+		table.gallery img {
+			padding: 5px;
+			margin: 2px;
+			border: 1px solid #ccc;
+			max-width: 120px;
+			max-height: 120px;
+		}
+		.mbf-item { display: none; }
+	</style>
+</head>
+<body>
+	<div id="main">
+		<h1>files</h1>
+		<hr size="1" style="color:#ccc">
+		<table class="gallery">
+		<tr>
+		

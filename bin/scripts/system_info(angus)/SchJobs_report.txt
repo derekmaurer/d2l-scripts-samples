@@ -1,0 +1,54 @@
+ServerName , TaskName , LastStatus , RunAsUser
+===============================================
+PINK , Diageo_billing , 0 , WWTEAM\winbatch
+PINK , Diageo_quota_notification , 0 , WWTEAM\winbatch
+PINK , LL_billing , 0 , WWTEAM\winbatch
+PINK , LL_billing_oracle , 0 , WWTEAM\winbatch
+PINK , LL_billing_sql2005 , 0 , WWTEAM\winbatch
+PINK , LL_quota_notification , 0 , WWTEAM\winbatch
+PINK , LL_quota_notification_2005 , 0 , WWTEAM\winbatch
+PINK , LL_quota_notification_oracle , 0 , WWTEAM\winbatch
+FLOYD , Backup_Ontime_Data_from_RedBull-vm_for_Quick_Restore , 0 , WWTEAM\winbatch
+FLOYD , Backup_Server_Config-Notes_from_pink , 0 , WWTEAM\winbatch
+FLOYD , MegaRaidStatusLogger , 0 , WWTEAM\winbatch
+FLOYD , X-Store Robocopy , 0 , WWTEAM\winbatch
+BUFFY , IIS_Logs_Cleanup , 0 , WWTEAM\winbatch
+JUMPY , IIS_Logs_Cleanup , 0 , WWTEAM\winbatch
+JUMPY , RestartEgraphicsLLserver , 0 , WWTEAM\winbatch
+JUMPY , restart_IIS , 0 , WWTEAM\winbatch
+SHIFTY , Clean_Up_Adlib_Temp_Files_Older_Than_5_Days , 0 , WWTEAM\winbatch
+NASH , Backup Sitecope config and logs - archive2date , 3 , WWTEAM\winbatch
+NASH , Cleanup_7_TempSessionData , 0 , WWTEAM\winbatch
+NASH , DfrgMgr-1 , 0 , WWTEAM\winbatch
+NASH , DfrgMgr-2 , 0 , WWTEAM\winbatch
+NASH , DfrgMgr-3 , 0 , WWTEAM\winbatch
+NASH , Dump_MSDE_SQL_database - WSUS , 0 , WWTEAM\winbatch
+NASH , getuserdiff , 0 , WWTEAM\winbatch
+NASH , IIS_Logs_Cleanup , 0 , WWTEAM\winbatch
+NASH , RestartHiTrackMonitoringService , 0 , WWTEAM\winbatch
+NASH , scheduled_task_report , 0 , WWTEAM\winbatch
+NASH , update_CSS_Script , 0 , WWTEAM\winbatch
+RINGO , IIS_Logs_Cleanup , 0 , WWTEAM\winbatch
+KIP , IIS_Logs_Cleanup , 1 , WWTEAM\winbatch
+ELVIS , Clean_up_maint_reports , 0 , WWTEAM\winbatch
+ELVIS , Copy_tlogs_to_Standby , 0 , WWTEAM\winbatch
+ELVIS , restore_tlogs_to_Standby , 0 , WWTEAM\winbatch
+ANGUS , Clean_up_maint_reports , 0 , WWTEAM\winbatch
+ANGUS , Copy_tlogs_to_Standby , 0 , WWTEAM\winbatch
+ANGUS , restore_tlogs_from_Primary , 0 , WWTEAM\winbatch
+ANGUS , scheduled_tasks_report , 0 , WWTEAM\winbatch
+ELLA , IIS_Logs_Cleanup , 0 , WWTEAM\winbatch
+PEDRO , IIS_Logs_Cleanup , 1 , WWTEAM\winbatch
+PHAT , move_db_backups_to_speed , 0 , WWTEAM\winbatch
+PHAT , restore_tlogs_from_Primary , 0 , WWTEAM\winbatch
+PHAT , sqlmaint-backup-job-tlog-to_speed , 0 , WWTEAM\winbatch
+PHAT , sqlmaint-backup-job , 0 , WWTEAM\winbatch
+HOLDEM , IIS_Logs_Cleanup , 0 , WWTEAM\winbatch
+HOLDEM , mv_controlfiles , 1 , WWTEAM\winbatch
+HOLDEM , run_report_errors , 1 , WWTEAM\winbatch
+BALDY , IIS_Logs_Cleanup , 0 , WWTEAM\winbatch
+BALDY , restart_IIS , 0 , WWTEAM\winbatch
+CROSBY , IIS_Logs_Cleanup , 0 , WWTEAM\winbatch
+SPEED , delete_old_db_backups , 0 , WWTEAM\winbatch
+SPEED , restore_tlogs_from_Primary , 0 , WWTEAM\winbatch
+WILLIE , IIS_Logs_Cleanup , 0 , WWTEAM\winbatch

@@ -1,0 +1,65 @@
+﻿<HealthResultReport>
+	<Results>
+		<QueuesHealthResult>
+			<Queues>
+				<Queue>
+					<Name>D2L.LP.Distributed.Events#D2L.LE.Dropbox.Domain.Entities.Dropbox.Events.DropboxDeleteEvent,D2L.LE.Dropbox</Name>
+					<MessageCount>0</MessageCount>
+					<DeadMessageCount>2875</DeadMessageCount>
+					<QueueTime>00:00:00</QueueTime>
+				</Queue>
+				<Queue>
+					<Name>D2L.LP.Distributed.Events#D2L.LE.Grades.Events.SourceEvents.GradesVisibilityChanged,D2L.LE.Grades</Name>
+					<MessageCount>0</MessageCount>
+					<DeadMessageCount>7</DeadMessageCount>
+					<QueueTime>00:00:00</QueueTime>
+				</Queue>
+				<Queue>
+					<Name>D2L.LP.Distributed.Events#D2L.LE.News.Events.NewsVisibilityChanged,D2L.LE.News</Name>
+					<MessageCount>0</MessageCount>
+					<DeadMessageCount>1</DeadMessageCount>
+					<QueueTime>00:00:00</QueueTime>
+				</Queue>
+				<Queue>
+					<Name>D2L.LP.Distributed.Events#D2L.LE.Scorm.Events.ScormActivityTerminated,D2L.LE.Scorm</Name>
+					<MessageCount>0</MessageCount>
+					<DeadMessageCount>2</DeadMessageCount>
+					<QueueTime>00:00:00</QueueTime>
+				</Queue>
+			</Queues>
+			<ResultLevel>Error</ResultLevel>
+		</QueuesHealthResult>
+		<ServicesHealthResult>
+			<Services />
+			<ResultLevel>Good</ResultLevel>
+		</ServicesHealthResult>
+		<CacheHealthResult>
+			<ResultLevel>Good</ResultLevel>
+		</CacheHealthResult>
+		<SolrHealthResult>
+			<SolrSlaveURL>http://CA2PTCS005:8146/solr</SolrSlaveURL>
+			<SolrMasterURL>http://CA2PTCS005:8146/solr</SolrMasterURL>
+			<SlaveConnectionTest>Succeeded</SlaveConnectionTest>
+			<MasterConnectionTest>Succeeded</MasterConnectionTest>
+			<ResultLevel>Good</ResultLevel>
+		</SolrHealthResult>
+		<DatabaseHealthResult>
+			<Databases />
+			<ResultLevel>Good</ResultLevel>
+		</DatabaseHealthResult>
+		<FilesHealthResult>
+			<Areas />
+			<ResultLevel>Good</ResultLevel>
+		</FilesHealthResult>
+		<LdapHealthResult>
+			<ResultLevel>Good</ResultLevel>
+			<Servers>
+				<LdapServerHealth>
+					<ServerName>LDAP1</ServerName>
+					<IsAvailable>True</IsAvailable>
+					<ResponseTime>00:00:00.4516191</ResponseTime>
+				</LdapServerHealth>
+			</Servers>
+		</LdapHealthResult>
+	</Results>
+</HealthResultReport>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://schemas.desire2learn.com/noc/jobQueueStatusEvaluator/rules">
+
+	<queue name="ContentModulePackage">
+		<maxAge threshold="10:00:00" />
+	</queue>
+
+	<default>
+		<all>
+			<maxAge threshold="12:34:34"/>
+			<queueLength threshold="43"/>
+		</all>
+	</default>
+	
+</rules>

@@ -1,0 +1,10 @@
+unload_app.vbs clears the IIS application cache for all site on a 
+given server.  This is the same as clicking the UNLOAD button on the 
+home tab within a site's properties; but this is for ALL sites on
+the servername passed to the script.
+
+Output is friendly and lists the web site name (comment) for each site.
+
+Usage:
+
+cscript unload_app.vbs servername

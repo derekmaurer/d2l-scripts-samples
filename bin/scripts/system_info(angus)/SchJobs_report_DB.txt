@@ -1,0 +1,14 @@
+ServerName , TaskName , LastRun , LastStatus
+===============================================
+ELVIS , Clean_up_maint_reports , 12:00:00 AM, 10/29/2008 , 0
+ELVIS , Copy_tlogs_to_Standby , 9:20:00 AM, 10/29/2008 , 0
+ELVIS , restore_tlogs_to_Standby , 9:46:16 PM, 6/13/2008 , 0
+ANGUS , Clean_up_maint_reports , 12:00:00 AM, 6/19/2008 , 0
+ANGUS , Copy_tlogs_to_Standby , 9:45:34 PM, 6/13/2008 , 0
+ANGUS , restore_tlogs_from_Primary , 9:25:00 AM, 10/29/2008 , 0
+PHAT , move_db_backups_to_speed , 6:10:00 AM, 10/29/2008 , 0
+PHAT , restore_tlogs_from_Primary , 10:35:00 PM, 7/18/2008 , 0
+PHAT , sqlmaint-backup-job-tlog-to_speed , 9:30:00 AM, 10/29/2008 , 0
+PHAT , sqlmaint-backup-job , 12:10:00 AM, 10/29/2008 , 0
+SPEED , delete_old_db_backups , 8:10:00 AM, 10/29/2008 , 0
+SPEED , restore_tlogs_from_Primary , 9:25:00 AM, 10/29/2008 , 0

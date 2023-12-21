@@ -1,0 +1,8 @@
+"VCname","DCname","Clustername","Total Physical Memory (MB)","Configured Memory MB","Available Memory (MB)","Total CPU (Mhz)","Configured CPU (Mhz)","Available CPU (Mhz)","Total Disk Space (MB)","Configured Disk Space (MB)","Available Disk Space (MB)"
+"usabcps08vc0001","Ashburn, VA, Carpathia","US Hosting Cluster","131051.1875","58344","72707.1875","64000","2956","61044","1739776","726327","1013449"
+"t1vcs02","T1 Bell Datacenter","Dell-AMD-Cluster","2129821.9296875","889189","1240632.9296875","704000","172746","531254","32227328","10915799","21311529"
+"t1vcs02","T1 Bell Datacenter","UCS-Intel-Cluster","4193106.15625","1918874","2274232.15625","372720","198158","174562","55293184","22939621","32353563"
+"hfvcs02","Verizon - Virtual DC","Dell-AMD-Cluster","2162546.38671875","1213793","948753.38671875","600000","364779","235221","55933952","30377755","25556197"
+"hfvcs02","Verizon - Virtual DC","AMD-6200-Cluster","524236.0390625","136313","387923.0390625","140800","9699","131101","92654592","35037084","57617508"
+"hfvcs02","Verizon - Virtual DC","Dell-Intel-Cluster","1179511.44140625","572141","607370.44140625","124752","60908","63844","92654592","35037084","57617508"
+"ausyeqs08vc0001","AUSYEQ","AUSYEQ Production Cluster","524248.078125","233326","290922.078125","147200","10978","136222","2621440","1738645","882795"

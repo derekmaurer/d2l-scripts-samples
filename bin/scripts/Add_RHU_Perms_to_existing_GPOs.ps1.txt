@@ -1,0 +1,14 @@
+﻿$gpogroup = "RHU\GPO_Admins"
+$domain = (Get-WmiObject Win32_ComputerSystem).Domain
+
+$gpo = ""
+$gpolist = ""
+
+$gpolist = Get-GPO -Domain $domain -All
+$gpolist = $gpolist.displayname 
+
+foreach ($gpo in $gpolist) { 
+
+Set-GPPermission -Name $gpo -TargetName $gpogroup -TargetType Group -PermissionLevel GpoEditDeleteModifySecurity -DomainName $domain
+
+}

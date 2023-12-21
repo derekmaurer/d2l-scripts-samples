@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+	"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>files</title>
+	<link id="gallery" rel="alternate" href="photos.rss" type="application/rss+xml">
+	<script type="text/javascript" src="http://lite.piclens.com/current/piclens.js"> </script>
+	<style type="text/css">
+		#pl_main {
+			width: 700px;
+			margin: 20px auto;
+			font-family: Arial;
+			font-size: 14px;
+			line-height: 18px;
+			color: #333;
+		}
+		table.gallery {
+			padding: 5px;
+			width: 100%;
+		}
+		table.gallery td {
+			text-align: center;
+		}
+		table.gallery img {
+			padding: 5px;
+			margin: 2px;
+			border: 1px solid #ccc;
+			max-width: 120px;
+			max-height: 120px;
+		}
+		code { font-size: 12px; }
+		.mbf-item { display: none; }
+	</style>
+</head>
+<body>
+	<div id="pl_main">
+
+		<h1>files</h1>
+		<hr size="1" style="color:#ccc"><br/><br/>
+		<h2>Success!</h2>
+		We've created a "PicLens Media Files" directory in your designated folder. Now simply upload all the contents in this directory to your website with your favorite FTP program, and your slideshow gallery will be live!<br/><br/>
+
+		Specifically, you'll want to upload the following folders and files to your site:
+		<ul>
+			<li>pl_images</li>
+			<li>pl_thumbs</li>
+			<li>photos.rss</li>
+			<li>gallery.html</li>
+		</ul>
+        For more help, or to learn how to further customize Piclens slideshows for your current website, please visit <a href="http://www.piclens.com/publisher">http://www.piclens.com/publisher</a>.<br/><br/><br/> 
+		
+		<h2>Adding PicLens Slideshows to an Existing Webpage</h2>
+		PicLens Publisher creates a sample gallery and RSS Feed that's ready to go live on your website. Read this section only if you want add PicLens slideshows to an existing webpage instead of using the sample gallery.<br/><br/>To add PicLens to an existing webpage, all you need to do is borrow some of the specific code from the sample gallery.html and apply to your existing webpage. You can use any standard text or HTML editor to view the source code of gallery.html and photos.rss.<br/>
+
+		
+		<ol>
+			<li>Upload pl_images, pl_thumbs, and photos.rss to your website</li><br/><br/>
+			<li>In your existing webpage, include the RSS feed by adding a &lt;link&gt; tag inside the &lt;head&gt; section of your HTML page:<br/><br/>
+				<code>&lt;head&gt;<br>
+
+					&nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;files&lt;/title&gt;<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;link id="gallery" rel="alternate" href="photos.rss" type="application/rss+xml"></b><br>
+					&lt;/head&gt;</code>
+			<br/><br/>
+			<li>Include in your existing HTML webpage one or more of the images in your feed. PicLens will automatically detect and match your photos on the feed to that on your HTML page in the following two ways:
+				<ul>
+					<li>The URL specified in &lt;a href="..."&gt; matches the &lt;link&gt; attribute of the corresponding item in the RSS feed
+					<li>Media Binding Format is used to directly reference the corresponding RSS item. This example document uses MBF to bind the thumbnails below to their counterparts in <b>photos.rss</b>.<br/><br/>
+				</ul>
+
+		<li>Place the javascript below into your HTML webpage, which activates PicLens Lite<br/><br/>
+		<code>
+		&lt;a href="javascript:PicLensLite.start();"&gt;Start Slide Show with PicLens Lite&lt;img src="http://lite.piclens.com/images/PicLensButton.png" alt="PicLens" width="16" height="12" border="0" align="absmiddle"&gt;</a></li>&lt;/a&gt;</code>
+
+		</div>
+	</div>
+</body>
+</html>
+
+
